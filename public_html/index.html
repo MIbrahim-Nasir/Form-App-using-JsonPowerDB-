@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Enrollment Form</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            margin-bottom: 15px;
+            padding: 5px;
+            width: 100%;
+        }
+        button {
+            margin-right: 10px;
+            padding: 10px;
+        }
+        .disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Enrollment Form</h2>
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="rollNo">Roll No:</label>
+                <input type="text" class="form-control" name="rollNo" id="rollNo" placeholder="Enter Roll No" onchange="checkRecord()" required>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" class="form-control" id="fullName" placeholder="Enter Full Name" name="fullName" disabled>
+            </div>
+            <div class="form-group">
+                <label for="class">Class:</label>
+                <input type="text" class="form-control" id="class" placeholder="Enter Class" name="class" disabled>
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Birth Date:</label>
+                <input type="text" class="form-control" id="birthDate" name="birthDate" disabled>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address" disabled>
+            </div>
+            <div class="form-group">
+                <label for="enrollmentDate">Enrollment Date:</label>
+                <input type="text" class="form-control" id="enrollmentDate" name="enrollmentDate" disabled>
+            </div>
+            <button type="button" class="btn btn-primary" id="saveButton" disabled>Save</button>
+            <button type="button" class="btn btn-warning" id="updateButton" disabled>Update</button>
+            <button type="button" class="btn btn-secondary" id="resetButton" disabled>Reset</button>
+        </form>
+    </div>
+
+    <!-- Place your JS script files at the bottom just before closing body tag -->
+    <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+    <script src="js/index.js"></script>
+
+</body>
+</html>
